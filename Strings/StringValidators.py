@@ -1,10 +1,27 @@
 if __name__ == '__main__':
     s = input()
-    print s.isalnum()
-    print s.isalpha()
-    print s.isdigit()
-    print s.islower()
-    print s.isupper()
+    isalnum_ = False
+    isalpha_ = False
+    isdigit_ = False
+    islower_ = False
+    isupper_ = False
+    for i in range (len(s)):
+        if s[i].isalnum():
+            isalnum_ = True
+        if s[i].isalpha():
+            isalpha_ = True
+        if s[i].isdigit():
+            isdigit_ = True
+        if s[i].islower():
+            islower_ = True
+        if s[i].isupper():
+            isupper_ = True
+
+    print(isalnum_)
+    print(isalpha_)
+    print(isdigit_)
+    print(islower_)
+    print(isupper_)
 
 # In the first line, print True if  has any alphanumeric characters. Otherwise, print False.
 # In the second line, print True if  has any alphabetical characters. Otherwise, print False.
