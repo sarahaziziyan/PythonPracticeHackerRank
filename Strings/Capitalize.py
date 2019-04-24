@@ -13,11 +13,16 @@ def mutate_string(string, position, character):
 
 # Complete the solve function below.
 def solve(s):
-    splited = s.split(" ")
-    for i in range(0, len(splited)):
-        splited[i] = mutate_string(splited[i],0,splited[i][0].upper())
+    inSpaceChar = True
+    for i in range(0, len(s)):
+        if(s[i].__eq__(' ')):
+            inSpaceChar = True
+        else:
+            if(inSpaceChar):
+                s = mutate_string(s,i,s[i].upper())
+                inSpaceChar = False
 
-    return ' '.join(splited)
+    return s
 
 if __name__ == '__main__':
     s = input()
