@@ -6,7 +6,7 @@ def count_substring(string, sub_string):
     index = 0
     for i in range(0, len(string)):
         index = string.find(sub_string, index, len(string))
-        if index > 0:
+        if index >= 0:
             count+=1
             index+=1
 
